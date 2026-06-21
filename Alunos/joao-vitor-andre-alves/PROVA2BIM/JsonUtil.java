@@ -49,7 +49,10 @@ public class JsonUtil {
         Map<String, Object> mapa = new HashMap<>();
         pos++;
         pularEspacos();
-        if (texto.charAt(pos) == '}') {pos++; return mapa;}
+        if (texto.charAt(pos) == '}') {
+            pos++;
+            return mapa;
+        }
         while (true) {
             pularEspacos();
             String chave = parseString();
@@ -66,13 +69,16 @@ public class JsonUtil {
             }
         }
         return mapa;
-    } 
+    }
 
-        private List<Object> parseArray() {
+    private List<Object> parseArray() {
         List<Object> lista = new ArrayList<>();
         pos++;
         pularEspacos();
-        if (texto.charAt(pos) == ']') { pos++; return lista; }
+        if (texto.charAt(pos) == ']') {
+            pos++;
+            return lista;
+        }
         while (true) {
             Object valor = parseValor();
             lista.add(valor);
@@ -99,9 +105,12 @@ public class JsonUtil {
             pos++;
         }
         String valor = sb.toString();
-        if (valor.equals("true")) return true;
-        if (valor.equals("false")) return false;
-        if (valor.equals("null")) return null;
+        if (valor.equals("true"))
+            return true;
+        if (valor.equals("false"))
+            return false;
+        if (valor.equals("null"))
+            return null;
         return Double.parseDouble(valor);
     }
 

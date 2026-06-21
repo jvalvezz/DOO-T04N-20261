@@ -15,7 +15,8 @@ public class Serie {
     public Serie() {
     }
 
-    public Serie(int id, String nome, String idioma, List<String>generos, double nota, String status, String dataEstreia, String dataTermino, String emissora) {
+    public Serie(int id, String nome, String idioma, List<String> generos, double nota, String status,
+            String dataEstreia, String dataTermino, String emissora) {
         this.id = id;
         this.nome = nome;
         this.idioma = idioma;
@@ -35,7 +36,6 @@ public class Serie {
         this.id = id;
     }
 
-
     public String getNome() {
         return nome;
     }
@@ -43,7 +43,6 @@ public class Serie {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
 
     public String getIdioma() {
         return idioma;
@@ -53,7 +52,6 @@ public class Serie {
         this.idioma = idioma;
     }
 
-
     public List<String> getGeneros() {
         return generos;
     }
@@ -61,7 +59,6 @@ public class Serie {
     public void setGeneros(List<String> generos) {
         this.generos = generos;
     }
-
 
     public double getNota() {
         return nota;
@@ -71,7 +68,6 @@ public class Serie {
         this.nota = nota;
     }
 
-
     public String getStatus() {
         return status;
     }
@@ -79,7 +75,6 @@ public class Serie {
     public void setStatus(String status) {
         this.status = status;
     }
-
 
     public String getDataEstreia() {
         return dataEstreia;
@@ -89,7 +84,6 @@ public class Serie {
         this.dataEstreia = dataEstreia;
     }
 
-
     public String getDataTermino() {
         return dataTermino;
     }
@@ -97,7 +91,6 @@ public class Serie {
     public void setDataTermino(String dataTermino) {
         this.dataTermino = dataTermino;
     }
-
 
     public String getEmissora() {
         return emissora;
