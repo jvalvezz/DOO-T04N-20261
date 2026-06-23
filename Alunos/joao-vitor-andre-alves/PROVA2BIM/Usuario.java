@@ -39,4 +39,33 @@ public class Usuario {
         return desejoAssistir;
     }
 
+    public void adicionarFavorita(Serie serie) {
+        adicionar(favoritas, serie);
+    }
+
+    public void removerFavorita(Serie serie) {
+        favoritas.remove(serie);
+    }
+
+    public void adicionarAssistida(Serie serie) {
+        adicionar(assistidas, serie);
+    }
+
+    public void removerAssistida(Serie serie) {
+        assistidas.remove(serie);
+    }
+
+    public void adicionarDesejoAssistir(Serie serie) {
+        adicionar(desejoAssistir, serie);
+    }
+
+    public void removerDesejoAssistir(Serie serie) {
+        desejoAssistir.remove(serie);
+    }
+
+    private void adicionar(List<Serie> lista, Serie serie) {
+        if (!lista.contains(serie)) {
+            lista.add(serie);
+        }
+    }
 }
